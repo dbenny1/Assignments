@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --red: rgb(255, 38, 0);
+    --yellow: rgb(255, 217, 0);
+    --green: rgb(0, 170, 0);
+    --blue: rgb(91, 169, 241);
+}
+
+body {
+    padding: 8rem 1rem;
+    background-color: rgb(2, 0, 27);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 0.4fr 0.6fr;
+    grid-template-areas:
+    "one one two"
+    "three four four"
+    "three five five"
+    ;
+    gap: 1em;
+}
+
+.grid-item {
+    padding: 4rem;
+}
+
+.one {
+    grid-area: one;
+    background-color: var(--red);
+}
+
+.two {
+    grid-area: two;
+    background-color: var(--yellow);
+}
+
+.three {
+    grid-area: three;
+    background-color: var(--green);
+}
+
+.four {
+    grid-area: four;
+    background-color: var(--blue);
+}
+
+.five {
+    grid-area: five;
+    background-color: var(--blue);
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 8rem 0;
+    }
+    .grid-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

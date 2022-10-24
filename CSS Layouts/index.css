@@ -1,0 +1,151 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --drkCyan: hsl(184, 100%, 22%);
+    --vryDrkCyan: hsl(179, 100%, 13%);
+    --fntLexend: 'Lexend Deca', sans-serif;
+    --fntBigShld: 'Big Shoulders Display', cursive;
+    --ft-400: 10px;
+    --ft-600: 18px;
+}
+
+body {
+    background-color: white;
+    padding: 8rem 1rem;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.flex-items {
+    color: white;
+    padding: 1rem 0.5rem;
+}
+
+.flex-items img {
+    display: inline-block;
+    max-width: 50%;
+}
+
+.flex-items h2 {
+    font-size: var(--ft-600);
+    font-family: var(--fntBigShld);
+    margin: 0.8rem 0;
+}
+
+.flex-items p {
+    font-size: var(--ft-400);
+    font-family: var(--fntLexend);
+    line-height: 1.5em;
+}
+
+.flex-items a {
+    text-decoration: none;
+    font-family: var(--fntLexend);
+    font-size: var(--ft-400);
+    background-color: white;
+    display: inline-block;
+    padding: 0.5em 0.8em;
+    margin-top: 2rem;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.flex-items a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.sedan {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--orange);
+}
+
+.sedan a {
+    color: var(--orange);
+}
+
+.suvs {
+    background-color: var(--drkCyan);
+}
+
+.suvs a {
+    color: var(--drkCyan);
+}
+
+.luxury {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--vryDrkCyan);
+}
+
+.luxury a {
+    color: var(--vryDrkCyan);
+}
+
+body a {
+    display: block;
+    padding: 3rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: var(--fntLexend);
+    font-size: 18px;
+}
+
+body > a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --ft-400: 15px;
+        --ft-600: 35px;
+    }
+
+    body {
+        padding: 8rem 0;
+    }
+
+    .flex-container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .flex-items {
+        display: inline-block;
+        padding: 3rem;
+        color: white;
+    }
+
+    .flex-items h2 {
+        font-family: var(--fntBigShld);
+        font-size: var(--ft-600);
+    }
+    
+    .flex-items p {
+        line-height: 1.5em;
+    }
+
+    .flex-items a {
+        padding: 0.5em 1em;
+    }
+}
